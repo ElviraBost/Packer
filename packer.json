@@ -23,13 +23,19 @@
     }],
     "provisioners": [
         {
+            "type": "ansible",
+            "playbook_file": "hardening.yml",
+            "extra_arguments":["--extra-vars", "ansible_python_interpreter=/usr/bin/python3"]
+        },
+        {
             "type":"ansible",
             "playbook_file":"hello_world.yml",
             "extra_arguments": ["--extra-vars", "ansible_python_interpreter=/usr/bin/python3"]
+            
         },
         {
         "type": "file",
-        "source": "files/website",
+        "source": "Packer/website",
         "destination": "~/website"
         },
         {
