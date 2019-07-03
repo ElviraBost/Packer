@@ -1,0 +1,8 @@
+"inline":[
+    "sudo apt-get update",
+    "sudo apt-get install -y nginx",
+    "sudo mv `/website/* /var/wwww/html/",
+    "sudo service nginx restart",
+    "sudo ufw allow 'Nginx HTTP'",
+    "sudo systemctl enable nginx"
+]
